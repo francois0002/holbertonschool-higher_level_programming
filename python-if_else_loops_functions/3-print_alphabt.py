@@ -4,4 +4,4 @@ for a in range(97, 123):
         continue
 
 
-    print(f"chr{a}", end="")
+    print("{}".format(chr(a)), end="")
