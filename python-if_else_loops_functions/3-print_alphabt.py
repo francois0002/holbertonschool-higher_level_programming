@@ -3,5 +3,5 @@ for a in range(97, 123):
     if a == 101 or a == 113:
         continue
 
-    a = chr(a)
-    print(f"{a}", end="")
+
+    print(f"chr{a}", end="")
