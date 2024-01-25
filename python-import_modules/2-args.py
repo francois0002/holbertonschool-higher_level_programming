@@ -3,7 +3,7 @@ if __name__ == "__main__":
 
     import sys
 
-    nbr_args= len(sys.argv)
+    nbr_args = len(sys.argv)
     if nbr_args == 1:
         print("{} arguments.".format(nbr_args - 1))
     elif nbr_args == 2:
