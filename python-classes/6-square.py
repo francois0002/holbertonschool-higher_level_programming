@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """This module initialize a class named Square"""
 
+
 class Square:
     """Define a square"""
-    def __init__(self, size=0, ):
+    def __init__(self, size=0, position ):
         """Initialize a new Square.
 
         Args:
             size (int): The size of the new square.
+            position (int): Position of something
         """
         if isinstance(size, int) is False:
             raise TypeError("size must be an integer")
