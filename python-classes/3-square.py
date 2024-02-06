@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This module initialize a class named Square"""
 
 class Square:
     """Define a square"""
