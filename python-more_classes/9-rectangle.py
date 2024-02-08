@@ -99,3 +99,12 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """Returns a new Rectangle instance with width == height == size"""
+        if isinstance(size, int) is False:
+            raise TypeError("width must be an integer")
+        square = Rectangle(size, size)
+        Rectangle.number_of_instances += 1
+        return square
