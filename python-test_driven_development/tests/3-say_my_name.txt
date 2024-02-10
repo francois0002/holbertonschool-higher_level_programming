@@ -54,14 +54,14 @@ Section // No string
 
 
 # Test case with second invalid paramater
-    >>> add_integer("François", b)
+    >>> say_my_name("François", b)
     Traceback (most recent call last):
     ...
     TypeError: last_name must be an string
 
 
 # Test case with list
-    >>> add_integer([5,5])
+    >>> asay_my_name([5,5])
     Traceback (most recent call last):
     ...
     TypeError: first_name must be an string
