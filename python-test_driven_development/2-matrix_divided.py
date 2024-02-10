@@ -24,3 +24,5 @@ def add_integer(a, b=98):
     if isinstance(b, float) is True:
         int(b)
     return a + b
+
+
