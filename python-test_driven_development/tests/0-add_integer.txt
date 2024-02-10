@@ -12,11 +12,11 @@ This is an example text file in reStructuredText format.  First import
 Section // Numbers
 ----------------------
 
-Test case : A test with basic integer
+# Test case : A test with basic integer
     >>> add_integer(1, 1)
     2
 
-Test case : A test with basic float
+# Test case : A test with basic float
     >>> add_integer(1.0, 1.0)
     2
 
