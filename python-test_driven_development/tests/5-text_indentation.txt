@@ -1,0 +1,97 @@
+5. Text indentation module
+===============================
+
+using ``text_indentation``
+----------------------
+
+This is an example text file in reStructuredText format.  First import
+``text_indentation`` from the ``5. Text indentation module`` module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Section // Non-Parameters
+----------------------
+
+# Test case without parameters
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+
+Section // Correct Parameters
+----------------------
+
+# Test case with a short text
+
+    >>> text_indentation('je suis françois')
+    Je suis françois
+
+# Test case with a short text and a character for 2 new lines
+
+    >>> text_indentation('Ponty Mython?')
+    Ponty Mython?
+    <BLANKLINE>
+
+# Test case with a short text and characters for 6 new lines
+
+    >>> text_indentation("Hello world. Monty Python? It's is:")
+    Hello world.
+    <BLANKLINE>
+    Monty Python?
+    <BLANKLINE>
+    It's is:
+    <BLANKLINE>
+
+# Test case with a text with a special format
+
+    >>> text_indentation("""Bye world. \
+    ... Python Monty? \
+    ... Isn't""")
+    Bye world.
+    <BLANKLINE>
+    Python Monty?
+    <BLANKLINE>
+    Isn't
+
+# Test case with only spaces and characters to prints newlines
+
+    >>> text_indentation("   ?:.   ")
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+
+# Test case with only spaces and characters to prints newlines
+
+    >>> text_indentation("  .??:?.  ")
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+
+Section // Incorrect Parameters
+----------------------
+
+# Test case with an integer parameter
+
+    >>> text_indentation(15)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+# Test case with a data type parameter
+
+    >>> text_indentation(str)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
