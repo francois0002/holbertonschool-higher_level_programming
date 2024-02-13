@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""print the list named List sorted"""
+""" implement sorted list"""
 
 
 class MyList(list):
-    """print the list named List sorted"""
+    """Implements sorted list for class Mylist."""
+
     def print_sorted(self):
-        """print the list named List sorted"""
+        """Print a list in sorted ascending order."""
         print(sorted(self))
