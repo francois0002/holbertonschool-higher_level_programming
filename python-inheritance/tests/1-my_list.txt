@@ -1,79 +1,18 @@
-0. Integer addition module
+1. 1-mylist.py
 ===============================
 
-using ``add_integer``
+using ``print_sorted``
 ----------------------
 
 This is an example text file in reStructuredText format.  First import
-``add_integer`` from the ``0. Integer addition module`` module:
-    >>> add_integer = __import__("0-add_integer").add_integer
+``print_sorted`` from the ``1. 1-mylist.py`` module:
+    >>> print_sorted = __import__("1-mylist.py").add_integer
 
 
-Section // Numbers
-----------------------
 
-# Test case : A test with basic integer
-    >>> add_integer(1, 1)
-    2
-
-# Test case : A test with basic float
-    >>> add_integer(1.0, 1.0)
-    2
-
-# Test case with negative int
-    >>> add_integer(-5, -15)
-    -20
-
-# Test case with negative float
-    >>> add_integer(-5.0, -5.0)
-    -10
-
-# Test case with only a and b = 98 by defaut
-    >>> add_integer(2)
-    100
-
-# Test case with one integer and one float
-    >>> add_integer(2, 3.0)
-    5
-
-
-Section // No Numbers
-----------------------
 
 # Test case without parameters
 
-    >>> add_integer()
+     >>> my_list.print_sorted(1)
     Traceback (most recent call last):
-    TypeError: add_integer() missing 1 required positional argument: 'a'
-
-
-# Test case with none
-    >>> add_integer(None)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-
-# Test case with one parameter none
-    >>> add_integer(5, None)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-
-
-# Test case with first invalid paramater
-    >>> add_integer(a, 5)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-
-# Test case with second invalid paramater
-    >>> add_integer(5, b)
-    Traceback (most recent call last):
-    TypeError: b must be an integer
-
-# Test case with text
-    >>> add_integer("45")
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-
-# Test case with list
-    >>> add_integer([5,5])
-    Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
