@@ -31,10 +31,10 @@ class Rectangle(BaseGeometry):
         return self.__width * self.__height
 
     def __str__(self):
-        """
-        print string
-        """
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        """Return the print() and str()"""
+        string = "[" + str(self.__class__.__name__) + "] "
+        string += str(self.__width) + "/" + str(self.__height)
+        return string
 
 
 class Square(Rectangle):
@@ -43,3 +43,7 @@ class Square(Rectangle):
         self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
+
+    def __str__(self):
+        """print string"""
+        return '[Square] {:d}/{:d}'.format(self.__size, self.__size)
