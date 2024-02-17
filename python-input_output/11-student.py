@@ -24,3 +24,9 @@ class Student:
             return sel_d
 
         return class_d
+
+    def reload_from_json(self, json):
+        """Replace all attributes of the Student.
+        """
+        for a, b in json.items():
+            setattr(self, a, b)
