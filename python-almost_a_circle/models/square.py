@@ -4,6 +4,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """ Define a square"""
     def __init__(self, size, x=0, y=0, id=None):
@@ -21,7 +22,6 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-
     def __str__(self):
         """ return [Square] (<id>) <x>/<y> - <size>"""
         return "[Square] ({}) {}/{} - {}".format(
@@ -36,7 +36,7 @@ class Square(Rectangle):
                 self.size = args[1]
                 self.x = args[2]
                 self.y = args[3]
-            except:
+            except():
                 pass
         else:
             if 'id' in kwargs:

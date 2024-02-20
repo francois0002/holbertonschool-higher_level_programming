@@ -4,6 +4,7 @@
 
 import json
 
+
 class Base:
     """ Base of all others class in the project. Goal : manage id attribute
     in all future classes and to avoid duplicating the same code"""
@@ -19,7 +20,7 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """Returns the JSON string representation of list_dictionaries"""
-        if not list_dictionaries :
+        if not list_dictionaries:
             return "[]"
         else:
             str_json = json.dumps(list_dictionaries)

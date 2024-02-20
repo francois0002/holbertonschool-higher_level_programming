@@ -99,7 +99,7 @@ class Rectangle(Base):
                 self.height = args[2]
                 self.x = args[3]
                 self.y = args[4]
-            except:
+            except():
                 pass
         else:
             if 'id' in kwargs:
@@ -112,7 +112,6 @@ class Rectangle(Base):
                 self.x = kwargs['x']
             if 'y' in kwargs:
                 self.y = kwargs['y']
-
 
     def to_dictionary(self):
         """make a rectangle dictionnary"""
