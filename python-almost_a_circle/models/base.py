@@ -25,3 +25,31 @@ class Base:
         else:
             str_json = json.dumps(list_dictionaries)
             return str_json
+
+    def save_to_file(cls, list_objs):
+        """Writes the JSON string representation of list_objs to a file"""
+        list_dict = []
+        if list_objs is None:
+            list_objs = []
+
+        for items in list_objs:
+            list_dict.append(items.to_dictionary())
+
+        with open('{}.json'.format(cls.__name__), 'w', encoding='utf-8') as f:
+            f.write(cls.to_json_string(list_dict))
+
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation json_string"""
+        if json_string is None or json_string == "[]":
+            return []
+        return json.loads(json_string)
+
+    def create(cls, **dictionary):
+         """ Returns an instance with all attributes already set:"""
+         if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new
