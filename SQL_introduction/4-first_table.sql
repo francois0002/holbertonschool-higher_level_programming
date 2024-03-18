@@ -1,4 +1,4 @@
---Creates a table called first_table
+-- Creates a table called first_table
 -- id and name
 
 CREATE TABLE IF NOT EXISTS `first_table`
