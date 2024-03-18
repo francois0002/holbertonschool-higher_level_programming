@@ -1,3 +1,3 @@
--- Write a script that inserts a new row in the table first_table
--- Inserts a new row into first table
-INSERT INTO first_table VALUES (89, "Holberton School");
+-- list tables of databases
+-- shows all fields of DATABASE
+INSERT INTO first_table (id, name) VALUES (89, "Holberton School");
