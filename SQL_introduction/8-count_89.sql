@@ -1,3 +1,3 @@
 -- displays the number of records
 -- database hbtn_0c_0
-SELECT score, name FROM second_table WHERE score >= 10 ORDER BY score DESC;
+SELECT COUNT(id) FROM first_table WHERE ID = 89;
